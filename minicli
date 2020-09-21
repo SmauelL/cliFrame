@@ -1,8 +1,13 @@
 #!/usr/bin/php
 <?php
 
-if(php_sapi_name() !== 'cli'){
+if (php_sapi_name() !== 'cli') {
     exit;
 }
 
-echo "Hello World\n";
+require __DIR__ . '/vendor/autoload.php';
+
+use CliFrame\App;
+
+$app = new App();
+$app->runCommand($argv);
