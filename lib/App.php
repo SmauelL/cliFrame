@@ -25,7 +25,7 @@ class App
 
     public function registerCommand($name, $callable)
     {
-        $this->command_registry->registerCommand($name,$callable);
+        $this->command_registry->registerCommand($name, $callable);
     }
 
 
@@ -33,16 +33,16 @@ class App
     {
         $command_name = "help";
 
-        if(isset($argv[1])){
+        if (isset($argv[1])) {
             $command_name = $argv[1];
         }
 
         $command = $this->command_registry->getCommand($command_name);
-        if ($command == null){
+        if ($command == null) {
             $this->getPrinter()->display("ERROR: Command \"$command_name\" not found.");
             exit;
         }
 
-        call_user_func($command,$argv);
+        call_user_func($command, $argv);
     }
 }
