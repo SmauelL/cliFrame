@@ -5,7 +5,8 @@
  */
 
 namespace CliFrame;
-class CliPrinter{
+class CliPrinter
+{
     public function out($message)
     {
         echo $message;
