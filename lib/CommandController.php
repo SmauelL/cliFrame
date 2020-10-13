@@ -40,6 +40,16 @@ abstract class CommandController
         return $this->input->params;
     }
 
+    protected function hasParam($param)
+    {
+        return $this->input->hasParam($param);
+    }
+
+    protected function getParam($param)
+    {
+        return $this->input->getParam($param);
+    }
+
     protected function getApp()
     {
         return $this->app;
