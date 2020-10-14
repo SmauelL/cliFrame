@@ -21,8 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5be24e3e-8b99-4e18-9d7b-5dd79834a7e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CommandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CommandController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minicli" beforeDir="false" afterPath="$PROJECT_DIR$/minicli" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CommandCall.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Command/CommandCall.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CommandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Command/CommandController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CommandNamespace.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Command/CommandNamespace.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CommandRegistry.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Command/CommandRegistry.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/Command" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/minicli" />
     </key>
@@ -67,7 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600679215973</updated>
       <workItem from="1600679218198" duration="33373000" />
-      <workItem from="1602294108483" duration="1269000" />
+      <workItem from="1602294108483" duration="7228000" />
     </task>
     <servers />
   </component>
@@ -87,9 +90,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1168" y="463" key="NewPhpFileDialog" timestamp="1601449233403">
-      <screen x="0" y="23" width="1680" height="961" />
+    <state x="994" y="237" key="NewPhpClassDialog" timestamp="1602662420613">
+      <screen x="0" y="23" width="1680" height="963" />
+    </state>
+    <state x="994" y="237" key="NewPhpClassDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602662420613" />
+    <state x="1168" y="464" key="NewPhpFileDialog" timestamp="1602662433008">
+      <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="1168" y="463" key="NewPhpFileDialog/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1601449233403" />
+    <state x="1168" y="464" key="NewPhpFileDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602662433008" />
   </component>
 </project>

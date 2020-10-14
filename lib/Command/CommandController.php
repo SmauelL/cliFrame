@@ -4,7 +4,7 @@
  * Date: 2020/9/24 10:31 上午
  */
 
-namespace CliFrame;
+namespace CliFrame\Command;
 
 abstract class CommandController
 {

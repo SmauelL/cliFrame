@@ -4,7 +4,7 @@
  * Date: 2020/9/28 10:14 上午
  */
 
-namespace CliFrame;
+namespace CliFrame\Command;
 
 class CommandNamespace
 {

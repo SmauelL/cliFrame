@@ -4,7 +4,7 @@
  * Date: 2020/9/22 5:13 下午
  */
 
-namespace CliFrame;
+namespace CliFrame\Command;
 
 class CommandRegistry
 {
