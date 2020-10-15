@@ -6,23 +6,64 @@
 
 namespace CliFrame;
 
+use CliFrame\Command\CommandCall;
+use CliFrame\Command\CommandRegistry;
+
 class App
 {
-    protected $printer;
+    protected $services = [];
 
-    protected $command_registry;
+    protected $loaded_services = [];
 
     protected $app_signature;
 
-    public function __construct()
+    public function __construct(array $config = [])
     {
-        $this->printer = new CliPrinter();
-        $this->command_registry = new CommandRegistry(__DIR__ . '/../app/Command');
+        $config = array_merge([
+            'app_path' => __DIR__ . '/../app/Command',
+        ], $config);
+
+        $this->setSignature('./minicli help');
+
+        $this->addService('config', new Config($config));
+        $this->addService('command_registry', new CommandRegistry($this->config->app_path));
+
+        $output = new OutputHandler();
+        $output->registerFilter(new ColorOutputFilter());
+        $this->addService('printer', $output);
     }
 
-    public function getPrinter()
+    public function __get($name)
+    {
+        if(!array_key_exists($name,$this->services)){
+            return null;
+        }
+
+        if(!array_key_exists($name,$this->loaded_services)){
+            $this->loaded_services($name);
+        }
+
+        return $this->services[$name];
+    }
+
+    public function addService($name, ServiceInterface $service)
+    {
+        $this->services[$name] = $service;
+    }
+
+    public function loadService($name)
+    {
+        $this->loaded_services[$name]  = $this->services[$name]->load($this);
+    }
+
+    public function getPrinter(): OutputHandler
     {
         return $this->printer;
+    }
+
+    public function setOutputHandler(OutputHandler $outputHandler)
+    {
+        $this->services['printer'] = $output_printer;
     }
 
     public function getSignature()
@@ -32,17 +73,12 @@ class App
 
     public function printSignature()
     {
-        $this->getPrinter()->display(sprintf("usage: %s", $this->getSignature()));
+        $this->getPrinter()->display($this->getSignature());
     }
 
     public function setSignature($app_signature)
     {
         $this->app_signature = $app_signature;
-    }
-
-    public function registerController($name, CommandController $controller)
-    {
-        $this->command_registry->registerCommand($name, $controller);
     }
 
     public function registerCommand($name, $callable)
@@ -60,7 +96,7 @@ class App
         }
 
         $controller = $this->command_registry->getCallableController($input->command, $input->subcommand);
-        if ($controller instanceof CommandController) {
+        if ($controller instanceof ControllerInterface) {
             $controller->boot($this);
             $controller->run($input);
             $controller->teardown();
@@ -71,13 +107,12 @@ class App
 
     protected function runSingle(CommandCall $input)
     {
-        try {
+
             $callable = $this->command_registry->getCallable($input->command);
-            call_user_func($callable, $input);
-        } catch (\Exception $e) {
-            $this->getPrinter()->display("ERROR: " . $e->getMessage());
-            $this->printSignature();
-            exit;
-        }
+            if(is_callable($callable)){
+                call_user_func($callable, $input);
+                return true;
+            }
+        throw new CommandNotFoundException("The registered command is not a callable function.");
     }
 }
