@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5be24e3e-8b99-4e18-9d7b-5dd79834a7e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/App.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,8 @@
       <updated>1600679215973</updated>
       <workItem from="1600679218198" duration="33373000" />
       <workItem from="1602294108483" duration="7228000" />
-      <workItem from="1602725200860" duration="3959000" />
+      <workItem from="1602725200860" duration="8396000" />
+      <workItem from="1602835447964" duration="1971000" />
     </task>
     <servers />
   </component>
@@ -88,15 +88,19 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1156" y="265" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602840096050">
+      <screen x="0" y="23" width="1680" height="961" />
+    </state>
+    <state x="1156" y="265" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1602840096050" />
     <state x="994" y="237" key="NewPhpClassDialog" timestamp="1602662420613">
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="994" y="237" key="NewPhpClassDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602662420613" />
-    <state x="1168" y="465" key="NewPhpFileDialog" timestamp="1602749464024">
-      <screen x="0" y="23" width="1680" height="965" />
+    <state x="1168" y="463" key="NewPhpFileDialog" timestamp="1602840593376">
+      <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state x="1168" y="463" key="NewPhpFileDialog/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1601449233403" />
-    <state x="1168" y="464" key="NewPhpFileDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602749214297" />
-    <state x="1168" y="465" key="NewPhpFileDialog/0.23.1680.965/64.-1057.1920.1057@0.23.1680.965" timestamp="1602749464024" />
+    <state x="1168" y="463" key="NewPhpFileDialog/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1602840593376" />
+    <state x="1168" y="464" key="NewPhpFileDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602832267218" />
+    <state x="1168" y="465" key="NewPhpFileDialog/0.23.1680.965/64.-1057.1920.1057@0.23.1680.965" timestamp="1602816718096" />
   </component>
 </project>
