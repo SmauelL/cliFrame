@@ -8,6 +8,7 @@ namespace CliFrame\Output;
 
 use CliFrame\App;
 use CliFrame\Output\Adapter\DefaultPrinterAdapter;
+use CliFrame\Output\Helper\TableHelper;
 use CliFrame\ServiceInterface;
 
 class OutputHandler implements ServiceInterface
@@ -44,9 +45,9 @@ class OutputHandler implements ServiceInterface
         return $content;
     }
 
-    public function out($content,$style = null): void
+    public function out($content, $style = null): void
     {
-        $this->printer_adapter->out($this->filterOutput($content,$style));
+        $this->printer_adapter->out($this->filterOutput($content, $style));
     }
 
     public function rawOutput($content)
@@ -59,36 +60,41 @@ class OutputHandler implements ServiceInterface
         $this->rawOutput("\n");
     }
 
-    public function display($content, $alt = false):void
+    public function display($content, $alt = false): void
     {
         $this->newline();
-        $this->out($content,$alt ? "alt" : "default");
+        $this->out($content, $alt ? "alt" : "default");
         $this->newline();
     }
 
-    public function error($content,$alt = false):void
+    public function error($content, $alt = false): void
     {
         $this->newline();
         $this->out($content, $alt ? "error_alt" : "error");
         $this->newline();
     }
 
-    public function info($content,$alt = false):void
+    public function info($content, $alt = false): void
     {
         $this->newline();
         $this->out($content, $alt ? "info_alt" : "info");
         $this->newline();
     }
 
-    public function success($content,$alt = false): void
+    public function success($content, $alt = false): void
     {
         $this->newline();
-        $this->out($content,$alt ? "success_alt" : "success");
+        $this->out($content, $alt ? "success_alt" : "success");
         $this->newline();
     }
 
     public function printTable(array $table): void
     {
+        $helper = new TableHelper($table);
 
+        $filter = (isset($this->output_filters[0]) && $this->output_filters[0] instanceof OutputFilterInterface) ? $this->output_filters[0] : null;
+        $this->newline();
+        $this->rawOutput($helper->getFormattedTable($filter));
+        $this->newline();
     }
 }
