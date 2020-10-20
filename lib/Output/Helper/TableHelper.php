@@ -110,3 +110,5 @@ class TableHelper
         return str_pad($table_cell, $col_size);
     }
 }
+
+

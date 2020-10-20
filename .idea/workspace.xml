@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5be24e3e-8b99-4e18-9d7b-5dd79834a7e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Output/OutputHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Output/OutputHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Output/Helper/TableHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Output/Helper/TableHelper.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
       <workItem from="1602294108483" duration="7228000" />
       <workItem from="1602725200860" duration="8396000" />
       <workItem from="1602835447964" duration="2103000" />
-      <workItem from="1603077377029" duration="2678000" />
+      <workItem from="1603077377029" duration="5494000" />
     </task>
     <servers />
   </component>
@@ -98,10 +98,10 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="994" y="237" key="NewPhpClassDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602662420613" />
-    <state x="1168" y="463" key="NewPhpFileDialog" timestamp="1603077478372">
+    <state x="1168" y="463" key="NewPhpFileDialog" timestamp="1603187468463">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
-    <state x="1168" y="463" key="NewPhpFileDialog/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1603077478372" />
+    <state x="1168" y="463" key="NewPhpFileDialog/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1603187468463" />
     <state x="1168" y="464" key="NewPhpFileDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602832267218" />
     <state x="1168" y="465" key="NewPhpFileDialog/0.23.1680.965/64.-1057.1920.1057@0.23.1680.965" timestamp="1602816718096" />
   </component>
