@@ -6,7 +6,10 @@
 
 namespace CliFrame\Command;
 
-abstract class CommandController
+use CliFrame\App;
+use CliFrame\ControllerInterface;
+
+abstract class CommandController implements ControllerInterface
 {
     protected $app;
 

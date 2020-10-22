@@ -6,7 +6,10 @@
 
 namespace CliFrame\Command;
 
-class CommandRegistry
+use CliFrame\App;
+use CliFrame\ServiceInterface;
+
+class CommandRegistry implements ServiceInterface
 {
     protected $commands_path;
 
@@ -17,6 +20,10 @@ class CommandRegistry
     public function __construct($commands_path)
     {
         $this->commands_path = $commands_path;
+    }
+
+    public function load(App $app)
+    {
         $this->autoloadNamespaces();
     }
 
@@ -54,7 +61,7 @@ class CommandRegistry
         return isset($this->default_registry[$command]) ? $this->default_registry[$command] : null;
     }
 
-    public function getCallableController($command, $subcommand = null)
+    public function getCallableController($command, $subcommand = "default")
     {
         $namespace = $this->getNamespace($command);
 
@@ -72,5 +79,26 @@ class CommandRegistry
         }
 
         return $single_command;
+    }
+
+    public function getCommandMap()
+    {
+        $map = [];
+
+        foreach ($this->default_registry as $command => $callback) {
+            $map[$command] = $callback;
+        }
+
+        foreach ($this->namespaces as $command => $namespace) {
+            $controllers = $namespace->getControllers();
+            $subs = [];
+            foreach ($controllers as $subcommand => $controller) {
+                $subs[] = $subcommand;
+            }
+
+            $map[$command] = $subs;
+        }
+
+        return $map;
     }
 }

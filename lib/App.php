@@ -8,6 +8,9 @@ namespace CliFrame;
 
 use CliFrame\Command\CommandCall;
 use CliFrame\Command\CommandRegistry;
+use CliFrame\Exception\CommandNotFoundException;
+use CliFrame\Output\Filter\ColorOutputFilter;
+use CliFrame\Output\OutputHandler;
 
 class App
 {
@@ -35,12 +38,12 @@ class App
 
     public function __get($name)
     {
-        if(!array_key_exists($name,$this->services)){
+        if (!array_key_exists($name, $this->services)) {
             return null;
         }
 
-        if(!array_key_exists($name,$this->loaded_services)){
-            $this->loaded_services($name);
+        if (!array_key_exists($name, $this->loaded_services)) {
+            $this->loadService($name);
         }
 
         return $this->services[$name];
@@ -53,7 +56,7 @@ class App
 
     public function loadService($name)
     {
-        $this->loaded_services[$name]  = $this->services[$name]->load($this);
+        $this->loaded_services[$name] = $this->services[$name]->load($this);
     }
 
     public function getPrinter(): OutputHandler
@@ -61,7 +64,7 @@ class App
         return $this->printer;
     }
 
-    public function setOutputHandler(OutputHandler $outputHandler)
+    public function setOutputHandler(OutputHandler $output_printer)
     {
         $this->services['printer'] = $output_printer;
     }
@@ -108,11 +111,11 @@ class App
     protected function runSingle(CommandCall $input)
     {
 
-            $callable = $this->command_registry->getCallable($input->command);
-            if(is_callable($callable)){
-                call_user_func($callable, $input);
-                return true;
-            }
+        $callable = $this->command_registry->getCallable($input->command);
+        if (is_callable($callable)) {
+            call_user_func($callable, $input);
+            return true;
+        }
         throw new CommandNotFoundException("The registered command is not a callable function.");
     }
 }

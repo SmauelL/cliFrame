@@ -56,7 +56,7 @@ class CommandCall
 
     public function hasFlag($flag)
     {
-        return in_array($flag,$this->flags);
+        return in_array($flag, $this->flags);
     }
 
     public function getParam($param)
