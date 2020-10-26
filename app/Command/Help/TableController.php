@@ -16,7 +16,7 @@ class TableController extends CommandController
     {
         $this->getPrinter()->display('Testing Tables');
 
-        table = new TableHelper();
+        $table = new TableHelper();
         $table->addHeader(['Header 1','Header 2','Header 3']);
 
         for ($i = 1;$i <= 10; $i++){
