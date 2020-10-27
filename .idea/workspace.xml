@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5be24e3e-8b99-4e18-9d7b-5dd79834a7e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Command/Help/TableController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Command/Help/TableController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,8 @@
       <workItem from="1602294108483" duration="7228000" />
       <workItem from="1602725200860" duration="8396000" />
       <workItem from="1602835447964" duration="2103000" />
-      <workItem from="1603077377029" duration="17935000" />
+      <workItem from="1603077377029" duration="18574000" />
+      <workItem from="1603762438711" duration="950000" />
     </task>
     <servers />
   </component>
@@ -106,16 +107,24 @@
       <screen x="0" y="23" width="1680" height="963" />
     </state>
     <state x="994" y="237" key="NewPhpClassDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602662420613" />
-    <state x="1168" y="469" key="NewPhpFileDialog" timestamp="1603706647725">
-      <screen x="0" y="23" width="1680" height="974" />
+    <state x="1168" y="465" key="NewPhpFileDialog" timestamp="1603765404300">
+      <screen x="0" y="23" width="1680" height="965" />
     </state>
     <state x="1168" y="463" key="NewPhpFileDialog/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1603442101171" />
     <state x="1168" y="464" key="NewPhpFileDialog/0.23.1680.963/64.-1057.1920.1057@0.23.1680.963" timestamp="1602832267218" />
-    <state x="1168" y="465" key="NewPhpFileDialog/0.23.1680.965/64.-1057.1920.1057@0.23.1680.965" timestamp="1602816718096" />
+    <state x="1168" y="465" key="NewPhpFileDialog/0.23.1680.965/64.-1057.1920.1057@0.23.1680.965" timestamp="1603765404299" />
     <state x="1168" y="469" key="NewPhpFileDialog/0.23.1680.974/64.-1057.1920.1057@0.23.1680.974" timestamp="1603706647725" />
+    <state x="687" y="252" key="RollbackChangesDialog" timestamp="1603765201087">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="687" y="252" key="RollbackChangesDialog/0.0.1680.1050/64.-1080.1920.1080@0.0.1680.1050" timestamp="1603765201087" />
     <state x="682" y="409" key="WebDeployment.AddServerDialog.v.1" timestamp="1603355359779">
       <screen x="0" y="23" width="1680" height="961" />
     </state>
     <state x="682" y="409" key="WebDeployment.AddServerDialog.v.1/0.23.1680.961/64.-1057.1920.1057@0.23.1680.961" timestamp="1603355359779" />
+    <state x="541" y="280" width="598" height="490" key="find.popup" timestamp="1603765364521">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="541" y="280" width="598" height="490" key="find.popup/0.0.1680.1050/64.-1080.1920.1080@0.0.1680.1050" timestamp="1603765364521" />
   </component>
 </project>

@@ -23,16 +23,16 @@ class DefaultController extends CommandController
     {
         $this->getPrinter()->info('Available Commands');
 
-        foreach ($this->command_map as $command => $sub){
+        foreach ($this->command_map as $command => $sub) {
 
             $this->getPrinter()->newline();
-            $this->getPrinter()->out($command,'info_alt');
+            $this->getPrinter()->out($command, 'info_alt');
 
-            if(is_array($sub)){
-                foreach ($sub as $subcommand){
-                    if($subcommand !== 'default'){
+            if (is_array($sub)) {
+                foreach ($sub as $subcommand) {
+                    if ($subcommand !== 'default') {
                         $this->getPrinter()->newline();
-                        $this->getPrinter()->out(sprintf('%s%s','└──',$subcommand));
+                        $this->getPrinter()->out(sprintf('%s%s', '└──', $subcommand));
                     }
                 }
             }

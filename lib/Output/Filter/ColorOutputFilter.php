@@ -23,22 +23,22 @@ class ColorOutputFilter implements OutputFilterInterface
         return $this->theme;
     }
 
-    public function setTheme(CLITheme $theme):void
+    public function setTheme(CLITheme $theme): void
     {
         $this->theme = $theme;
     }
 
-    public function filter($message, $style = null):string
+    public function filter($message, $style = null): string
     {
-        return $this->format($message,$style);
+        return $this->format($message, $style);
     }
 
-    public function format($message,$style = "default"):string
+    public function format($message, $style = "default"): string
     {
         $style_colors = $this->theme->getStyle($style);
 
         $bg = '';
-        if(isset($style_colors[1])){
+        if (isset($style_colors[1])) {
             $bg = ';' . $style_colors[1];
         }
 
