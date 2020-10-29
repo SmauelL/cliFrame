@@ -8,14 +8,9 @@ if (php_sapi_name() !== 'cli') {
 require __DIR__ . '/vendor/autoload.php';
 
 use CliFrame\App;
-use CliFrame\CommandCall;
 
-$app = new App();
-$app->setSignature("cliFrame hello name [ user=name ]");
-
-$app->registerCommand('help', function (CommandCall $call) use ($app) {
-    $app->printSignature();
-    print_r($call->params);
-});
+$app = new App([
+   'app_path' => __DIR__ . '/app/Command'
+]);
 
 $app->runCommand($argv);
