@@ -16,6 +16,6 @@ class TestController extends CommandController
         $name = $this->hasParam('user') ? $this->getParam('user') : 'World';
         $this->getPrinter()->display(sprintf("Hello,%s!", $name));
 
-        print_r($this->getParam());
+        print_r($this->getParams());
     }
 }
