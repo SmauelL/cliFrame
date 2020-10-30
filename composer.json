@@ -4,5 +4,8 @@
       "CliFrame\\": "lib/",
       "App\\": "app/"
     }
+  },
+  "require": {
+    "ext-readline": "*"
   }
 }
