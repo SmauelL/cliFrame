@@ -10,7 +10,7 @@ require __DIR__ . '/vendor/autoload.php';
 use CliFrame\App;
 
 $app = new App([
-   'app_path' => __DIR__ . '/app/Command'
+    'app_path' => __DIR__ . '/app/Command'
 ]);
 
 $app->runCommand($argv);
